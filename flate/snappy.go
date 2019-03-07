@@ -245,7 +245,7 @@ type snappyL2 struct {
 	table [tableSize]tableEntry
 }
 
-// EncodeL2 uses a similar algorithm to level 1, but is capable
+// Encode: Encode uses a similar algorithm to level 1, but is capable
 // of matching across blocks giving better compression at a small slowdown.
 func (e *snappyL2) Encode(dst *tokens, src []byte) {
 	const (

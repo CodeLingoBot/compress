@@ -283,7 +283,7 @@ func (z *Reader) Read(p []byte) (n int, err error) {
 	return z.Read(p)
 }
 
-// Support the io.WriteTo interface for io.Copy and friends.
+// WriteTo: Support the io.WriteTo interface for io.Copy and friends.
 func (z *Reader) WriteTo(w io.Writer) (int64, error) {
 	total := int64(0)
 	crcWriter := crc32.NewIEEE()

@@ -371,7 +371,7 @@ func (f *decompressor) Read(b []byte) (int, error) {
 	}
 }
 
-// Support the io.WriteTo interface for io.Copy and friends.
+// WriteTo: Support the io.WriteTo interface for io.Copy and friends.
 func (f *decompressor) WriteTo(w io.Writer) (int64, error) {
 	total := int64(0)
 	flushed := false
